@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marriage Green Card Prep Kit</title>
+  <meta name="description" content="A step-by-step prep kit for couples getting ready for a marriage-based green card process. Checklists, timelines, interview prep, and red-flag guidance." />
+  <style>
+    :root{
+      --bg:#0b0b12;
+      --card:#121225;
+      --text:#f4f4ff;
+      --muted:#b9b9d6;
+      --accent:#a78bfa;  /* purple */
+      --accent2:#fb7185; /* pink */
+      --border:rgba(255,255,255,.12);
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --radius:22px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 700px at 15% 10%, rgba(167,139,250,.22), transparent 60%),
+                  radial-gradient(900px 600px at 85% 25%, rgba(251,113,133,.16), transparent 55%),
+                  linear-gradient(180deg, #07070e, var(--bg));
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 18px; border:1px solid var(--border); border-radius:999px;
+      background: rgba(18,18,37,.55); backdrop-filter: blur(10px);
+      position:sticky; top:16px; z-index:10;
+    }
+    .brand{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.2px;}
+    .dot{
+      width:12px; height:12px; border-radius:50%;
+      background: linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow: 0 0 0 6px rgba(167,139,250,.12);
+    }
+    .navlinks{display:flex; gap:14px; align-items:center;}
+    .navlinks a{font-size:14px; color:var(--muted); text-decoration:none;}
+    .navlinks a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:12px 16px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      text-decoration:none; font-weight:650; font-size:14px;
+    }
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#0b0b12;
+    }
+    .btn:hover{transform: translateY(-1px);}
+    .hero{
+      display:grid; gap:22px; grid-template-columns: 1.2fr .8fr;
+      align-items:stretch; margin-top:26px;
+    }
+    @media (max-width: 880px){ .hero{grid-template-columns:1fr;} .navlinks{display:none;} }
+    .card{
+      background: rgba(18,18,37,.72);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:22px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      color:var(--muted); font-size:14px;
+    }
+    .pill{
+      font-size:12px; padding:6px 10px; border-radius:999px;
+      background: rgba(167,139,250,.14);
+      border:1px solid rgba(167,139,250,.22);
+      color: #e9e3ff;
+    }
+    h1{margin:10px 0 10px; font-size:44px; line-height:1.05; letter-spacing:-.8px;}
+    @media (max-width: 520px){ h1{font-size:36px;} }
+    .sub{color:var(--muted); font-size:16px; max-width:60ch}
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;}
+    .fine{color:var(--muted); font-size:12px; margin-top:10px;}
+    .grid3{display:grid; gap:14px; grid-template-columns:repeat(3,1fr); margin-top:14px;}
+    @media (max-width: 880px){ .grid3{grid-template-columns:1fr;} }
+    .feature{padding:16px; border-radius:18px; border:1px solid var(--border); background: rgba(255,255,255,.03);}
+    .feature b{display:block; margin-bottom:6px;}
+    .section{margin-top:22px;}
+    .section h2{margin:0 0 12px; font-size:22px; letter-spacing:-.2px;}
+    .list{display:grid; gap:10px;}
+    .li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 14px; border:1px solid var(--border);
+      border-radius:16px; background: rgba(255,255,255,.03);
+    }
+    .check{
+      width:18px; height:18px; border-radius:6px;
+      background: rgba(251,113,133,.18);
+      border:1px solid rgba(251,113,133,.28);
+      margin-top:2px; flex:0 0 auto;
+    }
+    .boxTitle{font-weight:750;}
+    .muted{color:var(--muted)}
+    .price{
+      font-size:40px; font-weight:850; letter-spacing:-.8px; margin:10px 0 0;
+    }
+    .small{font-size:13px; color:var(--muted)}
+    .faq details{
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:12px 14px;
+      background: rgba(255,255,255,.03);
+    }
+    .faq details + details{margin-top:10px;}
+    .faq summary{cursor:pointer; font-weight:650;}
+    footer{margin:26px 0 10px; color:var(--muted); font-size:12px;}
+    .badgeRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
+    .badge{
+      font-size:12px; padding:8px 10px; border-radius:999px;
+      border:1px solid var(--border); background: rgba(255,255,255,.03);
+      color:var(--muted);
+    }
+    .form input{
+      width:100%; padding:12px 14px; border-radius:14px;
+      border:1px solid var(--border); background: rgba(0,0,0,.25);
+      color:var(--text); outline:none;
+    }
+    .form label{display:block; font-size:12px; color:var(--muted); margin:10px 0 6px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand"><span class="dot"></span> Marriage Green Card Prep Kit</div>
+      <div class="navlinks">
+        <a href="#whatsinside">What’s Inside</a>
+        <a href="#forwho">Who It’s For</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <!-- Replace #checkout with your real link (PayPal, Stripe, Gumroad, etc.) -->
+      <a class="btn primary" href="#checkout">Get the Kit</a>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <div class="kicker">
+          <span class="pill">Step-by-step • Couple-friendly</span>
+          <span class="muted">Clear prep. Less stress.</span>
+        </div>
+
+        <h1>Feel confident walking into your marriage green card process.</h1>
+        <p class="sub">
+          A practical prep kit for couples who want to organize their relationship evidence, avoid common red flags,
+          and prepare for interview-style questions—without information overload.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="#checkout">Get instant access</a>
+          <a class="btn" href="#whatsinside">See what you get</a>
+        </div>
+        <div class="fine">
+          Educational resource only. Not legal advice. No attorney–client relationship is formed by this purchase.
+        </div>
+
+        <div class="badgeRow">
+          <div class="badge">✔ Evidence checklist</div>
+          <div class="badge">✔ Timeline builder</div>
+          <div class="badge">✔ Interview-style questions</div>
+          <div class="badge">✔ Red flag worksheet</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="pill">Quick checkout section</div>
+        <div class="price">$___</div>
+        <div class="small">One-time payment • Digital download</div>
+
+        <div class="section list" style="margin-top:14px;">
+          <div class="li"><span class="check"></span><div><div class="boxTitle">Evidence organizer</div><div class="muted">Know what to gather and how to label it.</div></div></div>
+          <div class="li"><span class="check"></span><div><div class="boxTitle">Timeline + story clarity</div><div class="muted">Build a clean relationship timeline quickly.</div></div></div>
+          <div class="li"><span class="check"></span><div><div class="boxTitle">Red flags &amp; fixes</div><div class="muted">Spot issues early and respond thoughtfully.</div></div></div>
+        </div>
+
+        <div id="checkout" class="section">
+          <h2>Get the Kit</h2>
+          <p class="muted" style="margin-top:-6px;">
+            Replace the button link with your payment page (PayPal / Gumroad / Stripe / Wix).
+          </p>
+          <a class="btn primary" href="https://example.com" target="_blank" rel="noopener">Go to checkout</a>
+
+          <hr style="border:none;border-top:1px solid var(--border); margin:16px 0;">
+          <h2>Or collect emails (free)</h2>
+          <p class="muted" style="margin-top:-6px;">
+            Use this as a waitlist/lead-magnet signup. Connect it later (Mailchimp, ConvertKit, etc.).
+          </p>
+
+          <!-- This demo form does not send anywhere. Replace action with your email tool form endpoint. -->
+          <form class="form" action="#" method="post" onsubmit="alert('Demo form: connect this to Mailchimp/ConvertKit and you’re live.'); return false;">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <div class="ctaRow" style="margin-top:12px;">
+              <button class="btn primary" type="submit" style="cursor:pointer;">Join the waitlist</button>
+              <a class="btn" href="#faq">Read FAQs</a>
+            </div>
+          </form>
+
+          <div class="fine">Tip: If you’re selling, swap the form for a checkout button only.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="whatsinside" class="card section">
+      <h2>What’s inside</h2>
+      <div class="grid3">
+        <div class="feature">
+          <b>Evidence Checklist</b>
+          <div class="muted">What couples commonly include, how to organize it, and what to avoid.</div>
+        </div>
+        <div class="feature">
+          <b>Relationship Timeline Builder</b>
+          <div class="muted">A structured way to present your story clearly and consistently.</div>
+        </div>
+        <div class="feature">
+          <b>Interview-Style Questions</b>
+          <div class="muted">Practice questions to help you answer confidently and calmly.</div>
+        </div>
+        <div class="feature">
+          <b>Red Flag Worksheet</b>
+          <div class="muted">Identify potential concerns early and plan your documentation strategy.</div>
+        </div>
+        <div class="feature">
+          <b>Submission Prep Tips</b>
+          <div class="muted">How to create a clean packet structure (labels, tabs, naming).</div>
+        </div>
+        <div class="feature">
+          <b>Peace-of-mind Plan</b>
+          <div class="muted">A simple weekly checklist so you don’t get stuck or overwhelmed.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="forwho" class="card section">
+      <h2>Who this is for</h2>
+      <div class="list">
+        <div class="li"><span class="check"></span><div><div class="boxTitle">Couples who feel overwhelmed</div><div class="muted">You want a simple structure instead of 30 tabs open.</div></div></div>
+        <div class="li"><span class="check"></span><div><div class="boxTitle">Couples who want to avoid mistakes</div><div class="muted">You’d rather prevent issues than fix them later.</div></div></div>
+        <div class="li"><span class="check"></span><div><div class="boxTitle">Couples preparing for interviews</div><div class="muted">You want practice prompts and confidence.</div></div></div>
+      </div>
+      <p class="fine" style="margin-top:12px;">
+        If you need legal advice specific to your situation, consider booking a consultation with a qualified attorney.
+      </p>
+    </div>
+
+    <div id="faq" class="card section faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Is this legal advice?</summary>
+        <div class="muted" style="margin-top:8px;">
+          No. This is a general educational resource and does not create an attorney–client relationship.
+        </div>
+      </details>
+      <details>
+        <summary>Does this guarantee approval?</summary>
+        <div class="muted" style="margin-top:8px;">
+          No. Immigration outcomes depend on many factors. This kit is designed to help you prepare and organize.
+        </div>
+      </details>
+      <details>
+        <summary>How do I access it?</summary>
+        <div class="muted" style="margin-top:8px;">
+          You can deliver it as a PDF download, a Notion page, a Google Drive folder, or inside your website portal.
+        </div>
+      </details>
+    </div>
+
+    <footer>
+      © <span id="y"></span> Your Brand Name • Educational resource only • Terms/Privacy links can go here.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
